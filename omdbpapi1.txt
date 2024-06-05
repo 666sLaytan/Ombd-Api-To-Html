@@ -1,0 +1,35 @@
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function getMovieData() {
+      var imdbID = "ttxxxxxxx"; 
+      var url = "http://www.omdbapi.com/?i=" + imdbID + "&apikey=xxxxxxxx"; 
+      $.getJSON(url, function(data) {
+        var title = data.Title;
+        var year = data.Year;
+        var director = data.Director;
+        var plot = data.Plot;
+        var poster = data.Poster;
+        var type = data.Type;
+        var actors = data.Actors
+        var awards = data.Awards
+        var country = data.Country
+        var genre = data.Genre
+        var episode = data.Episode
+        var episodes = data.Episodes
+        var season = data.Season
+        var series_id = data.SeriesID
+        var language = data.Language
+        var rated = data.Rated
+        var ratings = data.Ratings
+        var response = data.Response
+        var runtime = data.Runtime
+        var writer = data.Writer
+        var imdb_id = data.imdbID
+        var imdb_rating = data.imdbRating
+        var imdb_votes = data.imdbVotes
+        var html = "<h3>"+title+"</h3><h2>"+year+"</h2><br>Directed by: "+director+"<br>"+plot+"<br><img src='"+poster+"'>";
+        $("#movie-data").html(html); 
+      });
+    }
+  </script>
+</head><body onload="getMovieData()"><div id="movie-data"></div>
