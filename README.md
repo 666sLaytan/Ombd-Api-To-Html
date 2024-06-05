@@ -1,0 +1,1 @@
+With this simple html code, you can get omdb api call on your web page. I managed to get a smooth view on my blogspot page, you can edit the "var html" part as you wish. Maybe the "img src" part doesn't give a view, but you can solve it by using non-script
